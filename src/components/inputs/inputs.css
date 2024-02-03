@@ -1,0 +1,49 @@
+.mainBlock {
+    width: 500px;
+    height: 100px;
+    background-color: #F3F3F3;
+    display: flex;
+align-items: center;
+}
+
+.default {
+    width: 300px;
+    height: 30px;
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 200;
+    border: none;
+}
+
+
+.focus:focus{
+    outline: none;
+    border: 2px solid #DADADA
+}
+
+.active:active {
+    border: none;
+}
+
+
+fieldset {
+    width: 35px;
+     height: 20px;
+    border: 1px solid #F3F3F3;;
+}
+
+legend {
+    font-family: Inter;
+    font-weight: 600;
+}
+
+.ErrorText{
+    display: none;
+    width: 100px;
+    font-size: 13px;
+    color: #FD3419;
+    font-family: Inter;
+    font-weight: 400;
+    margin-top: 29px;
+    margin-left: 15px;
+}

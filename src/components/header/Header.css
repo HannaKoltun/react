@@ -1,0 +1,29 @@
+body {
+    margin: 0 auto;
+    background-color: #F3F3F3;
+}
+
+.header {
+    width: auto;
+    height: 84px;
+    background-color: #2231AA;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.burgerBlock {
+    width: 84px;
+    height: 84px;
+    border-left: 1px solid #5360CD;
+    border-right: 1px solid #5360CD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconBurger {
+    width: 24px;
+    height: 24px;
+    color: white;
+}

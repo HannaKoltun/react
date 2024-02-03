@@ -1,0 +1,53 @@
+.MainTabs {
+    width: 496px;
+    height: 48px;
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 0px 0px 20px;
+}
+
+.all {
+    width: 100px;
+    height: 48px;
+    padding: 0px, 40px, 24px, 40px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    border: none;
+}
+
+.favorite {
+    width: 176px;
+    height: 48px;
+    padding: 0px, 40px, 24px, 40px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    border: none;
+}
+
+.popular {
+    width: 140px;
+    height: 48px;
+    padding: 0px, 40px, 24px, 40px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    border: none;
+}
+
+
+.greyLine {
+    width: 1120px;
+    height: 1px;
+    background-color: #DADADA;
+    margin-bottom: 20px;
+}
