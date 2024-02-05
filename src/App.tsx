@@ -2,7 +2,6 @@ import './App.css';
 import Button from './components/button/button';
 import UserName from './components/userMalkin/UserName';
 import State from './components/state/state';
-import ListOfFilms from './components/ListOfFilms/ListOfFilms';
 import Form from './components/form/Form';
 import Inputs from './components/inputs/inputs';
 import TextArea from './components/Textarea/TextArea';
@@ -10,9 +9,13 @@ import Header from './components/header/Header';
 import Menu from './components/menuNotA/Menu';
 import Tabs from './components/Tabs/Tabs';
 import Primary from './components/PrimarySecondary/Primary';
+import LargeCard from './components/PostCard/LargeCard';
+import MediumCard from './components/PostCard/MediumCard';
+import SmallCard from './components/PostCard/SmallCard';
+import MainPostCardBlock from './components/PostCard/MainPostCardBlock';
+
 
 export default function App() {
-
 
   return (
     <>
@@ -36,27 +39,33 @@ export default function App() {
         type="password"
         typeInput="default focus active"
         isDisabled={false}
-      ></Inputs>
+      ></Inputs> */}
 
-      <TextArea rows={5} cols={33}></TextArea>
+      {/* <TextArea rows={5} cols={33}></TextArea> */}
 
       <Header></Header>
 
-      <Menu></Menu>
+      {/* <Menu></Menu> */}
 
-      <div className='MainTabs'>
+      {/* <div className='MainTabs'>
         <Tabs styleTab="all" isDisabled={false}>All</Tabs>
         <Tabs styleTab="favorite" isDisabled={false}>My favorites</Tabs>
         <Tabs styleTab="popular" isDisabled={false}>Popular</Tabs>
       </div>
-      <div className='greyLine'></div> 
 
-      <Primary styleButton="primary">Primary</Primary>
+      {/* <Primary styleButton="primary">Primary</Primary>
       <Primary styleButton="secondary">Secondary</Primary>
       <Primary styleButton="secondaryTwo">Secondary 2</Primary> */}
 
+      <MainPostCardBlock></MainPostCardBlock>
+{/* 
+      <LargeCard></LargeCard>
 
-      
+      <MediumCard></MediumCard>
+
+      <SmallCard></SmallCard> */}
+
+
     </>
   );
 }

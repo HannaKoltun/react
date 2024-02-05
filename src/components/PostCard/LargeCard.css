@@ -1,0 +1,124 @@
+.mainLargeCardBlock {
+    width: 736px;
+    height: 435px;
+    background-color: #F3F3F3;
+    border-bottom: 1px solid #DADADA;
+}
+
+.mainIconsBlock {
+    width: 736px;
+    height: 65.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.likeBlock {
+    display: flex;
+    justify-content: space-between;
+    width: 75px;
+    height: 24px;
+}
+
+.saveBlock {
+    display: flex;
+    justify-content: space-between;
+    width: 55px;
+    height: 24px;
+}
+
+
+.likeIcon {
+    width: 21px;
+    height: 22px;
+}
+
+.bookMarkIcon {
+    width: 21.68px;
+    height: 22px;
+
+}
+
+.ellipsisIcon {
+    width: 20px;
+    height: 22px;
+}
+
+
+.mainTopBlock {
+    width: 736px;
+    height: 385px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.blockWitnText {
+    width: 448px;
+    height: 356px;
+}
+
+
+.blockWithImage {
+    width: 256px;
+    height: 244px;
+    margin-left: 31px;
+}
+
+.date {
+    width: 104px;
+    height: 24px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #8D8E97
+}
+
+
+.title {
+    width: 448px;
+    height: 132px;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #313037;
+}
+
+.title:hover{
+color: #2231AA
+}
+
+
+.description {
+    width: 448px;
+    height: 168px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8D8E97
+}
+
+
+.imageSize{
+    width: 256px;
+    height: 244px;
+}
+
+.counter{
+    width: 20px;
+    height: 25px;
+    font-family: Inter;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:13px;
+}

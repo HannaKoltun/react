@@ -1,6 +1,8 @@
 body {
     margin: 0 auto;
     background-color: #F3F3F3;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .header {
@@ -9,6 +11,7 @@ body {
     background-color: #2231AA;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 

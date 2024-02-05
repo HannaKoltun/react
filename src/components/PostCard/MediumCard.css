@@ -1,0 +1,102 @@
+.mainMediumCardBlock {
+    width: 352px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F3F3F3;
+    border-bottom: 1px solid #DADADA;
+}
+
+.blockWithImageM {
+    width: 352px;
+    height: 246px;
+    margin-bottom: 18px;
+}
+
+.imageSizeM {
+    width: 352px;
+    height: 246px;
+}
+
+
+.dateM {
+    width: 104px;
+    height: 24px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8D8E97;
+    margin-bottom: 7px;
+}
+
+.titleM {
+    width: 352px;
+    height: 56px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #313037;
+    margin-bottom: 22px;
+}
+
+.titleM:hover {
+    color: #2231AA;
+}
+
+.mainIconsBlockM {
+    width: 352px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.likeBlockM {
+    width: 70px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.saveBlockM {
+    width: 60px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.likeIconM {
+    width: 21.68px;
+    height: 22px;
+}
+
+.bookMarkIconM {
+    width: 21.68px;
+    height: 22px;
+
+}
+
+.ellipsisIconM {
+    width: 20px;
+    height: 22px;
+}
+
+
+.counterM {
+    width: 15px;
+    height: 25px;
+    font-family: Inter;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+}
