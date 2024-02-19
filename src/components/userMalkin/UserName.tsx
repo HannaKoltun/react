@@ -1,9 +1,6 @@
 import './UserName.css';
 import { FiSearch } from "react-icons/fi";
-interface IUser {
-    username?: string
-    initials?: string
-}
+import { IUser } from '../../types/interface';
 
 export default function UserName({ username, initials, }: IUser) {
     return (

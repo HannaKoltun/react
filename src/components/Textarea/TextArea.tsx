@@ -1,11 +1,7 @@
-import { useState } from "react";
 import 'D:/Docs/TMS/react/reactt/my-react/src/components/Textarea/TextArea.css'
-import { isDisabled } from "@testing-library/user-event/dist/utils";
+import { ITextArea } from "../../types/interface";
 
-interface ITextArea {
-    rows: number
-    cols: number
-}
+
 export default function TextArea({ rows, cols }: ITextArea) {
 
     return (

@@ -6,66 +6,42 @@ import Form from './components/form/Form';
 import Inputs from './components/inputs/inputs';
 import TextArea from './components/Textarea/TextArea';
 import Header from './components/header/Header';
-import Menu from './components/menuNotA/Menu';
+import Footer from './components/Footer/Footer';
+import Menu from './components/menuNotAuthorized/Menu';
 import Tabs from './components/Tabs/Tabs';
 import Primary from './components/PrimarySecondary/Primary';
-import LargeCard from './components/PostCard/LargeCard';
-import MediumCard from './components/PostCard/MediumCard';
-import SmallCard from './components/PostCard/SmallCard';
-import MainPostCardBlock from './components/PostCard/MainPostCardBlock';
-
+import LargeCard from './components/LargePostCard/LargeCard';
+import MediumCard from './components/MediumPostCard/MediumCard';
+import SmallCard from './components/SmallPostCard/SmallCard';
+import MainPostCardBlock from '../src/pages/BlockPostCardMain/MainPostCardBlock';
+import BlockTitle from './pages/BlockTitle/BlockTitle';
+import BlockSignUp from './pages/BlockSignUp/BlockSignUp';
+import BlockRegConfirm from './pages/BlockRegConfirm/BlockRegConfirm';
+import BlockSignIn from './pages/BlockSignIn/BlockSignIn';
+import BlockSuccess from './pages/BlockSuccess/BlockSuccess';
+import NavigationPostCard from './components/NavigationPostCard/NavigationPostCard';
+import BlockContentPage from './pages/BlockContentPage/BlockContentPage';
 
 export default function App() {
 
   return (
     <>
-      {/* <Inputs
-        id="1"
-        legend="Title"
-        type="text"
-        typeInput="default focus active"
-        isDisabled={false}
-      ></Inputs>
-      <Inputs
-        id="2"
-        legend="Email"
-        type="email"
-        typeInput="default focus active"
-        isDisabled={false}
-      ></Inputs>
-      <Inputs
-        id="3"
-        legend="Password"
-        type="password"
-        typeInput="default focus active"
-        isDisabled={false}
-      ></Inputs> */}
-
       {/* <TextArea rows={5} cols={33}></TextArea> */}
-
       <Header></Header>
 
       {/* <Menu></Menu> */}
 
-      {/* <div className='MainTabs'>
-        <Tabs styleTab="all" isDisabled={false}>All</Tabs>
-        <Tabs styleTab="favorite" isDisabled={false}>My favorites</Tabs>
-        <Tabs styleTab="popular" isDisabled={false}>Popular</Tabs>
-      </div>
-
       {/* <Primary styleButton="primary">Primary</Primary>
       <Primary styleButton="secondary">Secondary</Primary>
-      <Primary styleButton="secondaryTwo">Secondary 2</Primary> */}
+      <Primary styleButton="secondaryTwo">Secondary 2</Primary>  */}
 
-      <MainPostCardBlock></MainPostCardBlock>
-{/* 
-      <LargeCard></LargeCard>
-
-      <MediumCard></MediumCard>
-
-      <SmallCard></SmallCard> */}
-
-
+      {/* <BlockTitle></BlockTitle>
+      <BlockSignUp></BlockSignUp>
+      <BlockRegConfirm></BlockRegConfirm>
+      <BlockSignIn></BlockSignIn>
+      <BlockSuccess></BlockSuccess> */}
+      {/* <MainPostCardBlock></MainPostCardBlock> */}
+      {/* <BlockContentPage></BlockContentPage> */}
     </>
   );
 }

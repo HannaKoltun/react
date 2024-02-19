@@ -1,12 +1,11 @@
 .mainMenuBlock {
     width: 236px;
     height: 960px;
-    top: 2264px;
-    left: 124px;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: absolute;
 }
 
 .home {

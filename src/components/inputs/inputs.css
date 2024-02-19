@@ -1,22 +1,36 @@
 .mainBlock {
-    width: 500px;
-    height: 100px;
+    width: 580px;
+    height: 125px;
     background-color: #F3F3F3;
     display: flex;
-align-items: center;
+    align-items: center;
 }
 
 .default {
-    width: 300px;
-    height: 30px;
+    width: 528px;
+    height: 45px;
+    border-radius: 2px;
     font-size: 13px;
     font-family: Inter;
     font-weight: 200;
     border: none;
+    padding: 0px 0px 0px 20px;
+}
+
+.default::placeholder {
+    width: 138px;
+     height: 20px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8D8E97
 }
 
 
-.focus:focus{
+.focus:focus {
     outline: none;
     border: 2px solid #DADADA
 }
@@ -28,22 +42,32 @@ align-items: center;
 
 fieldset {
     width: 35px;
-     height: 20px;
-    border: 1px solid #F3F3F3;;
+    height: 20px;
+    border: none
 }
 
 legend {
+    width: 150px;
+    height: 20px;
+    left: 1px;
     font-family: Inter;
+    font-size: 16px;
     font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #313037;
 }
 
-.ErrorText{
+
+
+.errorText {
     display: none;
     width: 100px;
     font-size: 13px;
     color: #FD3419;
     font-family: Inter;
     font-weight: 400;
-    margin-top: 29px;
+    margin-top: 45px;
     margin-left: 15px;
 }

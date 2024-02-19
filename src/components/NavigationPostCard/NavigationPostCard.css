@@ -1,0 +1,67 @@
+.mainBlocknavigation {
+    width: 1120px;
+    height: 100px;
+    border-radius: 2px;
+    border-bottom: 1px solid #DADADA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.arrowLeft {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 100px;
+    height: 24px;
+    /* background-color: rgb(116, 88, 164); */
+    display: flex;
+    justify-content: space-around;
+}
+
+.NumberSequence {
+    width: 200px;
+    height: 24px;
+    /* background-color: rgb(164, 146, 88); */
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.arrowRight {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    width: 100px;
+    height: 24px;
+    /* background-color: rgb(88, 164, 101); */
+    display: flex;
+    justify-content: space-around;
+}
+
+.iconArrRight {
+    width: 14.01px;
+    height: 18px;
+    margin-top: 4px;
+    margin-left: -15px;
+}
+
+.iconArrLeft {
+    width: 14.01px;
+    height: 18px;
+    margin-top: 4px;
+    margin-left: -15px;
+}

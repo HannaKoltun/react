@@ -1,11 +1,6 @@
 import './Tabs.css';
 import { useState } from "react";
-
-interface ITabs {
-    styleTab: string
-    children: string
-    isDisabled: boolean
-}
+import { ITabs } from '../../types/interface';
 
 export default function Tabs({ children, styleTab, isDisabled }: ITabs) {
 

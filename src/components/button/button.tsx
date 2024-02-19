@@ -1,17 +1,10 @@
 import './button.css';
+import { IButton } from '../../types/interface';
 
-
-interface IButton {
-    text: string | number,
-    isDisabled: boolean,
-    clickFunction: () => void
-}
-
-export default function Button({ text, isDisabled, clickFunction }: IButton) {
+export default function Button({ text, isDisabled }: IButton) {
     return (
         <>
             <button 
-            onClick={clickFunction} 
             disabled={isDisabled} className='button'>{text}</button>
         </>
     );

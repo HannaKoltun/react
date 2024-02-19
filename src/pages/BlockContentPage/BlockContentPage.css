@@ -1,0 +1,266 @@
+.mainOnePageContainer {
+    width: auto;
+    height: auto;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainContainer {
+    width: 1120px;
+    height: auto;
+    border-bottom: 1px solid #DADADA;
+}
+
+
+.homeLinkBlock {
+    width: 150px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+.homeLink {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 45px;
+    height: 24px;
+    color: #313037;
+}
+
+.stick {
+    width: 7px;
+    height: 24px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8D8E97
+}
+
+
+.postNumber {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 85px;
+    height: 24px;
+    color: #8D8E97;
+}
+
+
+.OnePageContainerTitle {
+    width: 1120px;
+    height: 210px;
+    font-family: Inter;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 80px;
+    text-align: left;
+    color: #313037;
+}
+
+
+.onePageImageCotainer {
+    width: 1120px;
+    height: 518px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.OnePageImage {
+    width: 992px;
+    height: 518px;
+}
+
+
+.onePageDescriptionContainer {
+    width: 1120px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.onePageDescription {
+    width: 920px;
+    height: auto;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #313037
+}
+
+.reactionsOnePageBlockContainer {
+    width: 1120px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.reactionsOnePageBlock {
+    width: 922px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerMark {
+    width: 190px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.likeButton {
+    width: 88px;
+    height: 56px;
+    padding: 16px, 32px, 16px, 32px;
+    border-radius: 2px;
+    background-color: #E8E8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconSize {
+    width: 21.68px;
+    height: 22px;
+}
+
+.iconBookMarkSize {
+    width: 21.68px;
+    height: 22px;
+    margin-left: 35px;
+    margin-right: 5px;
+}
+
+.dislikeButton {
+    width: 88px;
+    height: 56px;
+    left: 94px;
+    padding: 16px, 32px, 16px, 32px;
+    border-radius: 2px;
+    background-color: #E8E8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addToFav {
+    width: 237px;
+    height: 56px;
+    border-radius: 2px;
+    background-color: #E8E8E8;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #313037;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.prevContainer {
+    width: 335px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextContainer {
+    width: 455px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.textPrevContainer {
+    width: 293px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textNextContainer {
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: end;
+}
+
+
+.titlePrev {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 35px;
+    height: 24px;
+    color: #313037;
+    margin-bottom: 10px;
+}
+
+.descriptionPrev {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8D8E97;
+    width: 410px;
+    height: 24px;
+
+}
+
+
+.iconArrRightNext {
+    width: 16px;
+    height: 16px;
+}
+
+.iconArrLeftPrev {
+    width: 16px;
+    height: 16px;
+    border: 2px;
+}

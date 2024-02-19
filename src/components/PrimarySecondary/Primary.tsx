@@ -1,10 +1,6 @@
 import './Primary.css';
 import { useState } from "react";
-
-interface IPrimary {
-    children: string
-    styleButton: string
-}
+import { IPrimary } from '../../types/interface';
 
 export default function Primary({ children, styleButton }: IPrimary) {
 

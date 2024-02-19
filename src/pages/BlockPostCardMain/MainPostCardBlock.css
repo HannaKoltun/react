@@ -1,17 +1,19 @@
-.MainContainer{
+.mainContainer{
     width: auto;
     height: auto;
     background-color: #F3F3F3;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .mainPostCardBlock {
     width: 1120px;
-    height: 1675px;
+    height: 1560px;
 }
 
-.TextBlock {
+.textBlock {
     width: 1120px;
     height: 120px;
     font-family: Inter;
@@ -22,8 +24,6 @@
     text-align: left;
 }
 
-
-
 .container{
     width: 1120px;
     height: 1300px;
@@ -32,7 +32,7 @@
     justify-content: space-between;
 }
 
-.SmallContainer {
+.smallContainer {
     width: 352px;
     height: 1349px;
     display: flex;
@@ -40,18 +40,18 @@
     justify-content: space-between;
 }
 
-.LeftContainer {
+.leftContainer {
     width: 736px;
     height: 1245px;
 }
 
 
-.LargeContainer{
+.largeContainer{
     width: 736px;
     height: 452px;
 }
 
-.MediumContainer{
+.mediumContainer{
     width: 736px;
     height: 913px;
     display: flex;
@@ -59,7 +59,7 @@
 }
 
 
-.TopBlock{
+.topBlock{
     width: 736px;
     height: 456px;
     display: flex;
