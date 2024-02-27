@@ -1,9 +1,17 @@
-.mainLargeCardBlock {
+.mainLargeCardBlockLight {
     width: 736px;
     height: 435px;
     background-color: #F3F3F3;
     border-bottom: 1px solid #DADADA;
 }
+
+.mainLargeCardBlockDark {
+    width: 736px;
+    height: 435px;
+    background-color: #313037;
+    border-bottom: 1px solid #DADADA;
+}
+
 
 .mainIconsBlock {
     width: 736px;
@@ -28,20 +36,40 @@
 }
 
 
-.likeIcon {
+.likeIconLight {
     width: 21px;
     height: 22px;
+    color: black;
 }
 
-.bookMarkIcon {
+.likeIconDark {
+    width: 21px;
+    height: 22px;
+    color: white;
+}
+
+.bookMarkIconLight {
     width: 21.68px;
     height: 22px;
-
+    color: black;
 }
 
-.ellipsisIcon {
+.bookMarkIconDark {
+    width: 21.68px;
+    height: 22px;
+    color: white;
+}
+
+.ellipsisIconLight {
     width: 20px;
     height: 22px;
+    color: black;
+}
+
+.ellipsisIconDark {
+    width: 20px;
+    height: 22px;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -50,6 +78,7 @@
     height: 385px;
     display: flex;
     flex-direction: row;
+    text-decoration: none;
 }
 
 
@@ -77,7 +106,7 @@
 }
 
 
-.title {
+.titleLight {
     width: 448px;
     height: 132px;
     font-family: Inter;
@@ -89,8 +118,24 @@
     color: #313037;
 }
 
-.title:hover{
-color: #2231AA
+.titleDark {
+    width: 448px;
+    height: 132px;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+}
+
+.titleLight:hover {
+    color: #2231AA
+}
+
+.titleDark:hover {
+    color: #2231AA
 }
 
 
@@ -107,12 +152,12 @@ color: #2231AA
 }
 
 
-.imageSize{
+.imageSize {
     width: 256px;
     height: 244px;
 }
 
-.counter{
+.counterLight {
     width: 20px;
     height: 25px;
     font-family: Inter;
@@ -120,5 +165,18 @@ color: #2231AA
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right:13px;
+    margin-right: 13px;
+    color: black
+}
+
+.counterDark {
+    width: 20px;
+    height: 25px;
+    font-family: Inter;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+    color: white
 }

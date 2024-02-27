@@ -33,6 +33,17 @@ export interface IUser {
     initials?: string
 }
 
-export interface IOnePAgeDescription {
+export interface IOnePageDescription {
     children: any
+}
+
+export interface IPostCard {
+    "id": number,
+    "image"?: string,
+    "text"?: string,
+    "date"?: string,
+    "lesson_num"?: Number,
+    "title"?: string,
+    "description"?: string,
+    "author"?: number
 }

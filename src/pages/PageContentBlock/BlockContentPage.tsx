@@ -8,18 +8,30 @@ import '../../components/NavigationPostCard/NavigationPostCard.css';
 import { HiArrowLeft } from "react-icons/hi";
 import { HiArrowRight } from "react-icons/hi";
 import OnePageDescription from '../../components/OnePageDescription/OnePageDescription';
+import { useContext } from 'react';
+import { myContext } from '../../providers/ThemeContext';
+import { useParams } from 'react-router-dom';
 
 
 export default function BlockContentPage() {
 
+    const [color] = useContext(myContext)
+
+    const { id } = useParams();
+    console.log(id)
+
     return (
-        <div className='mainOnePageContainer'>
+        <div className={`mainOnePageContainer${color}`}>
             <div className='mainContainer'>
 
                 <div className='homeLinkBlock'>
-                    <div className='homeLink'>Home</div>
+
+                    <div className={`homeLink${color}`}>Home</div>
                     <div className='stick'>|</div>
                     <div className='postNumber'>
+
+
+
 
                         {[oneCardData].map((item) => (
                             <div key={item.id}>
@@ -28,13 +40,16 @@ export default function BlockContentPage() {
                         ))}
                     </div>
                 </div>
-                <div className='OnePageContainerTitle'>
+
+
+                <div className={`OnePageContainerTitle${color}`}>
                     {[oneCardData].map((item) => (
                         <div key={item.id}>
                             <div className='title'>{item.title}</div>
                         </div>
                     ))}
                 </div>
+
 
                 <div className='onePageImageCotainer'>
                     {<img src={oneCardData.image} className='OnePageImage' />}
@@ -44,7 +59,7 @@ export default function BlockContentPage() {
                 <OnePageDescription>
                     {[oneCardData].map((item) => (
                         <div key={item.id}>
-                            <div className='description'>{item.description}</div>
+                            <div className='descriptionStyle'>{item.description}</div>
                         </div>
                     ))}
                 </OnePageDescription>
@@ -53,7 +68,7 @@ export default function BlockContentPage() {
                 <OnePageDescription>
                     {[oneCardData].map((item) => (
                         <div key={item.id}>
-                            <div className='description'>{item.descriptiontwo}</div>
+                            <div className='descriptionStyle'>{item.descriptiontwo}</div>
                         </div>
                     ))}
                 </OnePageDescription>
@@ -62,21 +77,19 @@ export default function BlockContentPage() {
                 <OnePageDescription>
                     {[oneCardData].map((item) => (
                         <div key={item.id}>
-                            <div className='description'>{item.descriptionthree}</div>
+                            <div className='descriptionStyle'>{item.descriptionthree}</div>
                         </div>
                     ))}
                 </OnePageDescription>
-
-
 
                 <div className='reactionsOnePageBlockContainer'>
                     <div className='reactionsOnePageBlock'>
                         <div className='containerMark'>
-                            <div className='likeButton'><AiOutlineLike className='iconSize'></AiOutlineLike></div>
-                            <div className='dislikeButton'><BiDislike className='iconSize'></BiDislike></div>
+                            <div className={`likeButton${color}`}><AiOutlineLike className={`iconSize${color}`}></AiOutlineLike></div>
+                            <div className={`dislikeButton${color}`}><BiDislike className={`iconSize${color}`}></BiDislike></div>
                         </div>
 
-                        <div className='addToFav'>
+                        <div className={`addToFav${color}`}>
                             <FiBookmark className='iconBookMarkSize'></FiBookmark>
                             Add to favorites
                         </div>
@@ -88,17 +101,18 @@ export default function BlockContentPage() {
 
 
 
-            <div className='mainBlocknavigation'>
 
+
+
+
+            <div className={`mainOneBlockNavigation${color}`}>
                 <div className='prevContainer'>
-
-
                     <div className="arrowLeft">
-                        <HiArrowLeft className='iconArrLeftPrev'></HiArrowLeft>
+                        <HiArrowLeft className={`iconArrLeftPrev${color}`}></HiArrowLeft>
                     </div>
 
                     <div className='textPrevContainer'>
-                        <div className='titlePrev'>Prev</div>
+                        <div className={`titlePrev${color}`}>Prev</div>
                         <div className='descriptionPrev'>10 Things to Know About Salvador Dalí</div>
                     </div>
 
@@ -106,18 +120,15 @@ export default function BlockContentPage() {
 
                 <div className='nextContainer'>
                     <div className='textNextContainer'>
-                        <div className='titlePrev'>Next</div>
+                        <div className={`titlePrev${color}`}>Next</div>
                         <div className='descriptionPrev'>8 Beautiful Villas Belonging to Artists You Need to See</div>
                     </div>
 
 
                     <div className="arrowRight">
-                        <HiArrowRight className='iconArrRightNext'></HiArrowRight>
+                        <HiArrowRight className={`iconArrRightNext${color}`}></HiArrowRight>
                     </div>
-
-
                 </div>
-
             </div>
 
 

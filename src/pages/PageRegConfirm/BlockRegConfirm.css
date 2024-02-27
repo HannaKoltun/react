@@ -1,8 +1,5 @@
-/* body {
-    background-color: #313037;
-} */
 
-.mainContainerLight {
+.mainContainerConfirmLight {
     width: auto;
     height: auto;
     background-color: #F3F3F3;
@@ -10,19 +7,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
+}
+.mainContainerConfirmDark {
+    width: auto;
+    height: auto;
+    background-color: #313037;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
 
-.mainBlockTitle {
+.mainBlockTitleConfirmLight {
     width: 1120px;
     height: 850px;
     background-color: #F3F3F3;
     border-bottom: 1px solid #DADADA;
     margin-bottom: 30px;
 }
+.mainBlockTitleConfirmDark {
+    width: 1120px;
+    height: 850px;
+    background-color: #313037;
+    border-bottom: 1px solid #DADADA;
+    margin-bottom: 30px;
+}
 
 
-.textBlockLight {
+.textBlockConfirmLight {
     width: 1120px;
     height: 120px;
     font-family: Inter;
@@ -32,12 +47,21 @@
     letter-spacing: 0em;
     text-align: left;
 }
-
-/* .textBlockDark{
+.textBlockConfirmDark {
+    width: 1120px;
+    height: 120px;
+    font-family: Inter;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0em;
+    text-align: left;
     color: #FFFFFF;
-} */
+}
 
-.backHomeLight {
+
+
+.backHomeConfirmLight {
     width: 104px;
     height: 24px;
     font-family: Inter;
@@ -48,11 +72,20 @@
     margin-bottom: 20px;
 }
 
-/* .backHomeDark{
+.backHomeConfirmDark {
+    width: 104px;
+    height: 24px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
     color: #FFFFFF;
-} */
+    margin-bottom: 20px;
+}
 
-.container {
+
+
+.containerConfirmLight {
     width: 1120px;
     height: 360px;
     background-color: #F3F3F3;
@@ -60,8 +93,16 @@
     justify-content: center;
     align-items: center;
 }
+.containerConfirmDark {
+    width: 1120px;
+    height: 360px;
+    background-color: #313037;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.informationContainer {
+.informationContainerConfirmLight {
     width: 624px;
     height: 256px;
     border: 1px solid #DADADA;
@@ -72,7 +113,18 @@
     align-items: center;
 }
 
-.regDescription {
+.informationContainerConfirmDark {
+    width: 624px;
+    height: 256px;
+    border: 1px solid #DADADA;
+    background-color: #313037;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.regDescriptionConfirmLight {
     width: 318px;
     height: 72px;
     font-family: Catamaran;
@@ -80,6 +132,18 @@
     font-weight: 400;
     line-height: 24px;
     color: #313037;
+    margin-right: 219px;
+}
+
+
+.regDescriptionConfirmDark{
+    width: 318px;
+    height: 72px;
+    font-family: Catamaran;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #FFFFFF;
     margin-right: 219px;
 }
 

@@ -1,21 +1,13 @@
-import '../../pages/BlockContentPage/BlockContentPage.css';
-import { oneCardData } from '../../components/OnePostData';
-import { dataCards } from '../../components/data';
-import NavigationPostCard from '../../components/NavigationPostCard/NavigationPostCard';
-import Footer from '../../components/Footer/Footer';
-import { AiOutlineLike } from "react-icons/ai";
-import { BiDislike } from "react-icons/bi";
-import { FiBookmark } from "react-icons/fi";
+import '../../pages/PageContentBlock/BlockContentPage.css';
 import '../../components/NavigationPostCard/NavigationPostCard.css';
-import { HiArrowLeft } from "react-icons/hi";
-import { HiArrowRight } from "react-icons/hi";
-import { IOnePAgeDescription } from '../../types/interface';
+import { IOnePageDescription } from '../../types/interface';
+import { useContext } from 'react';
+import { myContext } from '../../providers/ThemeContext';
 
 
-export default function OnePageDescription({children}:IOnePAgeDescription) {
+export default function OnePageDescription({children}:IOnePageDescription) {
 
-
-
+    const [color] = useContext(myContext)
     return (
         <>
             <div className='onePageDescriptionContainer'>
@@ -23,8 +15,8 @@ export default function OnePageDescription({children}:IOnePAgeDescription) {
                 </div>
             </div>
             <div className='onePageDescriptionContainer'>
-                <div className='onePageDescription'>
-                            <div className='description'>{children}</div>
+                <div className={`onePageDescription${color}`}>
+                            <div className='descriptionStyle'>{children}</div>
                 </div>
             </div>
         </>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './style.css';
+import './Style.css';
 
 export default function State() {
     const [text, setText] = useState("Я первый")

@@ -5,73 +5,83 @@ import { BiDislike } from "react-icons/bi";
 import { FiBookmark } from "react-icons/fi";
 import { IoEllipsisHorizontal } from "react-icons/io5";
 import { dataCards } from "../data"
+import { myContext } from "../../providers/ThemeContext"
+import { useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { IPostCard } from '../../types/interface';
 
 
-export default function MediumCard() {
-
-    const originalDate = [dataCards[4]].map((item) => (item.date));
-    let DateString = String(originalDate)
-    const dateObj = new Date(DateString);
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const formattedDate = `${months[dateObj.getMonth()]} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
-
-    //image
-    const [imageUrl, setImageUrl] = useState('');
-    useEffect(() => {
-
-        async function fetchImage() {
-            let response = await fetch('https://loremflickr.com/320/240/space');
-            let blob = await response.blob();
-            let url = URL.createObjectURL(blob);
-            setImageUrl(url);
-        }
-        fetchImage();
-    }, []);
-
-    let [count, setCount] = useState(0)
-    return (
-        <>
-            <div className='mainMediumCardBlock'>
-                <div className='blockWithImageM'>
-                    <div>{imageUrl && <img src={imageUrl}
-                        className='imageSizeM' />}
-                    </div>
-                </div>
+export default function MediumCard({ id, image, text, date, lesson_num, title, description, author }: IPostCard) {
 
 
-                <div className='blockWitnTextM'>
-                    {[dataCards[4]].map((item) => (
-                        <div key={item.id}>
-                            <div className='dateM'>{formattedDate}</div>
-                            <div className='titleM'>{item.title}</div>
-                        </div>
-                    ))}
-                </div>
+    const [color] = useContext(myContext)
+
+//date
+    const formattedDate = (date: any) => {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        
+        const [year, month, day] = date.split('-');
+        return `${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
+    };
+    
 
 
-                <div className='mainIconsBlockM'>
+//image
+const [imageUrl, setImageUrl] = useState('');
+useEffect(() => {
 
-                    <div className='likeBlockM'>
-                        
-                    <AiOutlineLike className='likeIconM' onClick={() => setCount(count + 1)} />
-                        <div className='counterM'>
-                            {count}
-                        </div>
+    async function fetchImage() {
+        let response = await fetch('https://loremflickr.com/320/240/space');
+        let blob = await response.blob();
+        let url = URL.createObjectURL(blob);
+        setImageUrl(url);
+    }
+    fetchImage();
+}, []);
+
+let [count, setCount] = useState(0)
+
+return (
+    <>
 
 
+        <div className={`mainMediumCardBlock${color}`}>
 
-                        <BiDislike className='likeIconM'></BiDislike>
-                    </div>
 
-                    <div className='saveBlockM'>
-                        <FiBookmark className='bookMarkIconM'></FiBookmark>
-                        <IoEllipsisHorizontal className='ellipsisIconM'></IoEllipsisHorizontal>
-                    </div>
-
+            <div className='blockWithImageM'>
+                <div>{imageUrl && <img src={imageUrl}
+                    className='imageSizeM' />}
                 </div>
             </div>
-        </>
-    )
+
+            <div className='blockWithTextM'>
+                <div className='dateM'>{formattedDate(date)}</div>
+                <div key={id}>
+                    <Link className={`titleM${color}`} to={`/${id}`}>{title}</Link>
+                </div>
+            </div>
+
+
+            <div className='mainIconsBlockM'>
+                <div className='likeBlockM'>
+
+                    <AiOutlineLike className={`likeIconM${color}`} onClick={() => setCount(count + 1)} />
+                    <div className={`counterM${color}`}>
+                        {count}
+                    </div>
+
+                    <BiDislike className={`likeIconM${color}`}></BiDislike>
+                </div>
+
+                <div className='saveBlockM'>
+                    <FiBookmark className={`bookMarkIconM${color}`}></FiBookmark>
+                    <IoEllipsisHorizontal className={`ellipsisIconM${color}`}></IoEllipsisHorizontal>
+                </div>
+            </div>
+
+
+        </div >
+    </>
+)
 }
 

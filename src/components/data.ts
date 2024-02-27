@@ -27,7 +27,7 @@ export const dataCards: TDataCards[] = [
         "text": "Consectetur adipiscing elit",
         "date": "2024-01-19",
         "lesson_num": 2,
-        "title": "Title 2",
+        "title": "Researchers discover new species of deep-sea creatures during underwater expedition.",
         "description": "Description 2",
         "author": 2
     },
@@ -37,7 +37,7 @@ export const dataCards: TDataCards[] = [
         "text": "Sed do eiusmod tempor incididunt",
         "date": "2024-01-20",
         "lesson_num": 3,
-        "title": "Title 3",
+        "title": "Engineers develop innovative technology to improve efficiency of renewable energy sources.",
         "description": "Description 3",
         "author": 3
     },
@@ -47,7 +47,7 @@ export const dataCards: TDataCards[] = [
         "text": "Ut labore et dolore magna aliqua",
         "date": "2024-01-21",
         "lesson_num": 4,
-        "title": "Title 4",
+        "title": "Scientists analyze data from Mars rover to uncover clues about the planet's geological history.",
         "description": "Description 4",
         "author": 4
     },
@@ -57,7 +57,7 @@ export const dataCards: TDataCards[] = [
         "text": "Enim ad minim veniam",
         "date": "2024-01-22",
         "lesson_num": 5,
-        "title": "Astronauts prep for new solar arrays on nearly seven-hour spacewalk",
+        "title": "Biologists study the impact of climate change on endangered species in the Amazon rainforest.",
         "description": "Description 5",
         "author": 5
     },
@@ -67,7 +67,7 @@ export const dataCards: TDataCards[] = [
         "text": "Quis nostrud exercitation ullamco laboris",
         "date": "2024-01-23",
         "lesson_num": 6,
-        "title": "Title 6",
+        "title": "Astronomers observe rare celestial event using powerful telescopes.",
         "description": "Description 6",
         "author": 6
     },
@@ -77,7 +77,7 @@ export const dataCards: TDataCards[] = [
         "text": "Nisi ut aliquip ex ea commodo consequat",
         "date": "2024-01-24",
         "lesson_num": 7,
-        "title": "Title 7",
+        "title": "Geologists investigate volcanic activity in remote island chain.",
         "description": "Description 7",
         "author": 7
     },
@@ -87,7 +87,7 @@ export const dataCards: TDataCards[] = [
         "text": "Duis aute irure dolor in reprehenderit in voluptate",
         "date": "2024-01-25",
         "lesson_num": 8,
-        "title": "Astronauts prep for new solar arrays on nearly seven-hour spacewalk",
+        "title": "Meteorologists track severe weather patterns to provide early warnings to at-risk communities.",
         "description": "Description 8",
         "author": 8
     },
@@ -97,7 +97,7 @@ export const dataCards: TDataCards[] = [
         "text": "Velit esse cillum dolore eu fugiat nulla pariatur",
         "date": "2024-01-26",
         "lesson_num": 9,
-        "title": "Title 9",
+        "title": "Marine biologists conduct research on coral reefs to understand their resilience to environmental stressors.",
         "description": "Description 9",
         "author": 9
     },
@@ -107,9 +107,20 @@ export const dataCards: TDataCards[] = [
         "text": "Excepteur sint occaecat cupidatat non proident",
         "date": "2024-01-27",
         "lesson_num": 10,
-        "title": "Title 10",
+        "title": "Physicists collaborate on groundbreaking experiments at particle accelerator facilities.",
         "description": "Description 10",
         "author": 10
+    },
+
+    {
+        "id": 11,
+        "image": "image11.jpg",
+        "text": "Excepteur sint occaecat cupidatat non proident",
+        "date": "2024-01-28",
+        "lesson_num": 11,
+        "title": "Archaeologists uncover ancient artifacts at archaeological dig site, shedding light on past civilizations.",
+        "description": "Description 11",
+        "author": 11
     }
 ];
 

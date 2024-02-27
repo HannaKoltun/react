@@ -1,47 +1,56 @@
 import './App.css';
-import Button from './components/button/button';
-import UserName from './components/userMalkin/UserName';
-import State from './components/state/state';
-import Form from './components/form/Form';
-import Inputs from './components/inputs/inputs';
+import Button from './components/Button//Button';
+import UserName from './components/UserMalkin/UserName';
+import State from './components/State/State';
+import Form from './components/Form/Form';
+import Inputs from './components/Inputs/Inputs';
 import TextArea from './components/Textarea/TextArea';
-import Header from './components/header/Header';
+import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Menu from './components/menuNotAuthorized/Menu';
+import Menu from './components/MenuNotAuthorized/Menu';
 import Tabs from './components/Tabs/Tabs';
 import Primary from './components/PrimarySecondary/Primary';
 import LargeCard from './components/LargePostCard/LargeCard';
 import MediumCard from './components/MediumPostCard/MediumCard';
 import SmallCard from './components/SmallPostCard/SmallCard';
-import MainPostCardBlock from '../src/pages/BlockPostCardMain/MainPostCardBlock';
-import BlockTitle from './pages/BlockTitle/BlockTitle';
-import BlockSignUp from './pages/BlockSignUp/BlockSignUp';
-import BlockRegConfirm from './pages/BlockRegConfirm/BlockRegConfirm';
-import BlockSignIn from './pages/BlockSignIn/BlockSignIn';
-import BlockSuccess from './pages/BlockSuccess/BlockSuccess';
+import SearchCard from './components/SearchCard/SearchCard';
 import NavigationPostCard from './components/NavigationPostCard/NavigationPostCard';
-import BlockContentPage from './pages/BlockContentPage/BlockContentPage';
+import PageMainPostCard from '../src/pages/PagePostCards/MainPostCardBlock';
+import PageTitle from './pages/PageTitle/BlockTitle';
+import PageSignUp from './pages/PageSignUp/BlockSignUp';
+import PageRegConfirm from './pages/PageRegConfirm/BlockRegConfirm';
+import PageSignIn from './pages/PageSignIn/BlockSignIn';
+import PageSuccess from './pages/PageSuccess/BlockSuccess';
+import PageSearchResults from './pages/PageSearchResults/PageSearchResults';
+import BlockContentPage from './pages/PageContentBlock/BlockContentPage';
+import PageRecetPassword from  './pages/PageResetPassword/PageResetPassword';
+import ThemeContext from './providers/ThemeContext';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default function App() {
-
   return (
     <>
-      {/* <TextArea rows={5} cols={33}></TextArea> */}
-      <Header></Header>
 
-      {/* <Menu></Menu> */}
 
-      {/* <Primary styleButton="primary">Primary</Primary>
-      <Primary styleButton="secondary">Secondary</Primary>
-      <Primary styleButton="secondaryTwo">Secondary 2</Primary>  */}
+      <ThemeContext>
+        <BrowserRouter>
+          <Header></Header>
+        {/* <PageRecetPassword></PageRecetPassword> */}
+          <Routes>
+            <Route path='/' element={<PageMainPostCard />}></Route>
+            <Route path='/:id' element={<BlockContentPage />}></Route>
+            <Route path='/search' element={<PageSearchResults />}></Route>
+            <Route path='/regconfirm' element={<PageRegConfirm />}></Route>
+            <Route path='/signup' element={<PageSignUp />}></Route>
+            <Route path='/signin' element={<PageSignIn />}></Route>
+            <Route path='/title' element={<PageTitle />}></Route>
+            <Route path='/success' element={<PageSuccess />}></Route>
+          </Routes>
+        </BrowserRouter>
 
-      {/* <BlockTitle></BlockTitle>
-      <BlockSignUp></BlockSignUp>
-      <BlockRegConfirm></BlockRegConfirm>
-      <BlockSignIn></BlockSignIn>
-      <BlockSuccess></BlockSuccess> */}
-      {/* <MainPostCardBlock></MainPostCardBlock> */}
-      {/* <BlockContentPage></BlockContentPage> */}
+
+
+      </ThemeContext>
     </>
   );
 }

@@ -1,10 +1,20 @@
-.mainMediumCardBlock {
+.mainMediumCardBlockLight {
     width: 352px;
     height: 440px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #F3F3F3;
+    border-bottom: 1px solid #DADADA;
+}
+
+.mainMediumCardBlockDark {
+    width: 352px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #313037;
     border-bottom: 1px solid #DADADA;
 }
 
@@ -33,7 +43,7 @@
     margin-bottom: 7px;
 }
 
-.titleM {
+.titleMLight {
     width: 352px;
     height: 56px;
     font-family: Inter;
@@ -44,9 +54,34 @@
     text-align: left;
     color: #313037;
     margin-bottom: 22px;
+    text-decoration: none;
 }
 
-.titleM:hover {
+
+.blockWithTextM{
+    width: 352px;
+    height: 125px;
+}
+
+.titleMDark {
+    width: 352px;
+    height: 56px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 22px;
+    text-decoration: none;
+}
+
+.titleMLight:hover {
+    color: #2231AA;
+}
+
+.titleMDark:hover {
     color: #2231AA;
 }
 
@@ -73,24 +108,45 @@
     justify-content: space-between;
 }
 
-.likeIconM {
+.likeIconMLight {
     width: 21.68px;
     height: 22px;
+    color: black;
 }
 
-.bookMarkIconM {
+.likeIconMDark {
     width: 21.68px;
     height: 22px;
-
+    color: rgb(255, 255, 255);
 }
 
-.ellipsisIconM {
+.bookMarkIconMLight {
+    width: 21.68px;
+    height: 22px;
+    color: black;
+}
+
+.bookMarkIconMDark {
+    width: 21.68px;
+    height: 22px;
+    color: rgb(255, 255, 255);
+}
+
+
+.ellipsisIconMLight {
     width: 20px;
     height: 22px;
+    color: black;
+}
+
+.ellipsisIconMDark {
+    width: 20px;
+    height: 22px;
+    color: rgb(255, 255, 255);
 }
 
 
-.counterM {
+.counterMLight {
     width: 15px;
     height: 25px;
     font-family: Inter;
@@ -99,4 +155,15 @@
     justify-content: center;
     align-items: center;
     margin-right: 7px;
+}
+.counterMDark {
+    width: 15px;
+    height: 25px;
+    font-family: Inter;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    color: white;
 }

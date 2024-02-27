@@ -1,9 +1,12 @@
 import { useState } from "react";
-import 'D:/Docs/TMS/react/reactt/my-react/src/components/inputs/inputs.css'
+import 'D:/Docs/TMS/react/reactt/my-react/src/components/Inputs/Inputs.css'
 import { IInput } from "../../types/interface";
+import { myContext } from "../../providers/ThemeContext"
+import { useContext } from 'react';
 
 
 export default function Inputs({ typeInput, isDisabled, type, legend, id, placeholder }: IInput) {
+    const [color] = useContext(myContext)
 
     const [dataName, setDataNAme] = useState("");
     function inputTextChange(event: any): void {
@@ -16,10 +19,10 @@ export default function Inputs({ typeInput, isDisabled, type, legend, id, placeh
 
 
 return (
-    <div className="mainBlock">
+    <div className={`mainBlock${color}`}>
         <form>
-            <fieldset>
-                <legend >{legend}</legend>
+            <fieldset className="fieldset">
+                <legend className={`legend${color}`}>{legend}</legend>
                 <input
                     disabled={isDisabled}
                     id={id}

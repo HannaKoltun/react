@@ -2,7 +2,7 @@
     background-color: #313037;
 } */
 
-.mainContainerLight {
+.mainContainerInLight {
     width: auto;
     height: auto;
     background-color: #F3F3F3;
@@ -10,19 +10,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
+}
+.mainContainerInDark {
+    width: auto;
+    height: auto;
+    background-color: #313037;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
 
-.mainBlockTitle {
+.mainBlockTitleInLight {
     width: 1120px;
     height: 900px;
     background-color: #F3F3F3;
     border-bottom: 1px solid #DADADA;
     margin-bottom: 30px;
 }
+.mainBlockTitleInDark {
+    width: 1120px;
+    height: 900px;
+    background-color: #313037;
+    border-bottom: 1px solid #DADADA;
+    margin-bottom: 30px;
+}
 
 
-.textBlockLight {
+.textBlockInLight {
     width: 1120px;
     height: 120px;
     font-family: Inter;
@@ -32,12 +50,20 @@
     letter-spacing: 0em;
     text-align: left;
 }
-
-/* .textBlockDark{
+.textBlockInDark {
+    width: 1120px;
+    height: 120px;
+    font-family: Inter;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0em;
+    text-align: left;
     color: #FFFFFF;
-} */
+}
 
-.backHomeLight {
+
+.backHomeInLight {
     width: 104px;
     height: 24px;
     font-family: Inter;
@@ -47,12 +73,19 @@
     color: #313037;
     margin-bottom: 20px;
 }
-
-/* .backHomeDark{
+.backHomeInDark {
+    width: 104px;
+    height: 24px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
     color: #FFFFFF;
-} */
+    margin-bottom: 20px;
+}
 
-.container {
+
+.containerInLight {
     width: 1120px;
     height: 480px;
     background-color: #F3F3F3;
@@ -60,12 +93,31 @@
     justify-content: center;
     align-items: center;
 }
+.containerInDark {
+    width: 1120px;
+    height: 480px;
+    background-color: #313037;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.inputsContainer {
+.inputsContainerInLight {
     width: 624px;
     height: 445px;
     border: 1px solid #DADADA;
     background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputsContainerInDark {
+    width: 624px;
+    height: 445px;
+    border: 1px solid #DADADA;
+    background-color: #313037;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +139,7 @@
 }
 
 
-.titleAvailabilityAcc {
+.titleAvailabilityAccLight {
     width: 265px;
     height: 10px;
     font-family: Inter;
@@ -97,6 +149,21 @@
     letter-spacing: 0em;
     text-align: left;
     color: #8D8E97;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.titleAvailabilityAccDark {
+    width: 265px;
+    height: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #DADADA;
     display: flex;
     justify-content: space-around;
     margin-top: 15px;
@@ -114,7 +181,7 @@
 
 }
 
-.forgotPass {
+.forgotPassLight {
     width: 136px;
     height: 20px;
     font-family: Inter;
@@ -124,6 +191,20 @@
     letter-spacing: 0em;
     text-align: left;
     color: #313037;
+    text-decoration: none;
+    margin-right: 410px;
+}
+
+.forgotPassDark {
+    width: 136px;
+    height: 20px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
     text-decoration: none;
     margin-right: 410px;
 }

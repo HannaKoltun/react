@@ -1,10 +1,17 @@
-.mainSmallCardBlock {
+.mainSmallCardBlockLight {
     width: 352px;
     height: 206px;
     background-color: #F3F3F3;
     border-bottom: 1px solid #DADADA;
+    display: flex;
+    flex-direction: column;
 }
-
+.mainSmallCardBlockDark {
+    width: 352px;
+    height: 206px;
+    background-color: #313037;
+    border-bottom: 1px solid #DADADA;
+}
 
 .mainIconsBlockS {
     width: 352px;
@@ -27,19 +34,35 @@
     margin-bottom: 3px;
 }
 
-.titleS {
+.titleSLight {
     width: 222px;
     height: 84px;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
     color: #313037;
+    text-decoration: none;
+}
+.titleSDark {
+    width: 222px;
+    height: 84px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.titleS:hover {
+.titleSLight:hover {
+    color: #2231AA;
+}
+.titleSDark:hover {
     color: #2231AA;
 }
 
@@ -58,19 +81,38 @@
 }
 
 
-.likeIconS {
+.likeIconSLight {
     width: 21.68px;
     height: 22px;
+    color: black;
+}
+.likeIconSDark {
+    width: 21.68px;
+    height: 22px;
+    color: rgb(255, 255, 255);
 }
 
-.bookMarkIconS {
+.bookMarkIconSLight {
     width: 21.68px;
     height: 22px;
+    color: black;
 }
 
-.ellipsisIconS {
+.bookMarkIconSDark {
     width: 21.68px;
     height: 22px;
+    color: rgb(255, 255, 255);
+}
+
+.ellipsisIconSLight {
+    width: 21.68px;
+    height: 22px;
+    color: black;
+}
+.ellipsisIconSDark {
+    width: 21.68px;
+    height: 22px;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -79,7 +121,7 @@
     height: 116px;
     display: flex;
     flex-direction: row;
-    margin-bottom: 12px;
+    margin-bottom: 35px;
 }
 
 
@@ -104,7 +146,7 @@
 }
 
 
-.counterS {
+.counterSLight {
     width: 13px;
     height: 27px;
     font-family: Inter;
@@ -113,4 +155,16 @@
     justify-content: center;
     align-items: center;
     margin-right: 12px;
+    color: black;
+}
+.counterSDark {
+    width: 13px;
+    height: 27px;
+    font-family: Inter;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    color: rgb(255, 255, 255);
 }

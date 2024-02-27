@@ -5,16 +5,22 @@ import { BiDislike } from "react-icons/bi";
 import { FiBookmark } from "react-icons/fi";
 import { IoEllipsisHorizontal } from "react-icons/io5";
 import { dataCards } from "../data"
+import { myContext } from "../../providers/ThemeContext"
+import { useContext } from 'react';
+import { IPostCard } from '../../types/interface';
+import { Link } from 'react-router-dom';
 
 
-export default function SmallCard() {
+export default function SmallCard({ id, image, text, date, lesson_num, title, description, author }: IPostCard) {
+    const [color] = useContext(myContext)
 
-    const originalDate = [dataCards[7]].map((item) => (item.date));
-    let DateString = String(originalDate)
-    const dateObj = new Date(DateString);
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const formattedDate = `${months[dateObj.getMonth()]} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
+    //date
+    const formattedDate = (date: any) => {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        const [year, month, day] = date.split('-');
+        return `${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
+    };
 
     //image
     const [imageUrl, setImageUrl] = useState('');
@@ -33,38 +39,37 @@ export default function SmallCard() {
     let [count, setCount] = useState(0)
     return (
         <>
-            <div className='mainSmallCardBlock'>
+            <div className={`mainSmallCardBlock${color}`}>
                 <div className='mainTopBlockS'>
+
                     <div className='blockWitnTextS'>
 
-                        {[dataCards[7]].map((item) => (
-                            <div key={item.id}>
-                                <div className='dateS'>{formattedDate}</div>
-                                <div className='titleS'>{item.title}</div>
-                            </div>
-                        ))}
-
+                        <div key={id}>
+                            <div className='dateS'>{formattedDate(date)}</div>
+                            <Link className={`titleS${color}`} to={`/${id}`}>{title}</Link>
+                        </div>
                     </div>
-
                     <div className=' blockWithImageS'>{imageUrl && <img src={imageUrl}
-                        className='imageSizeS' />}
-                    </div>
+                    className='imageSizeS' />}
                 </div>
+                </div>
+
+
 
 
                 <div className='mainIconsBlockS'>
 
                     <div className='likeBlockS'>
-                    <AiOutlineLike className='likeIconS' onClick={() => setCount(count + 1)} />
-                        <div className='counterS'>
+                        <AiOutlineLike className={`likeIconS${color}`} onClick={() => setCount(count + 1)} />
+                        <div className={`counterS${color}`}>
                             {count}
                         </div>
-                        <BiDislike className='likeIconS'></BiDislike>
+                        <BiDislike className={`likeIconS${color}`}></BiDislike>
                     </div>
 
                     <div className='saveBlockS'>
-                        <FiBookmark className='bookMarkIconS'></FiBookmark>
-                        <IoEllipsisHorizontal className='ellipsisIconS'></IoEllipsisHorizontal>
+                        <FiBookmark className={`bookMarkIconS${color}`}></FiBookmark>
+                        <IoEllipsisHorizontal className={`ellipsisIconS${color}`}></IoEllipsisHorizontal>
                     </div>
 
                 </div>

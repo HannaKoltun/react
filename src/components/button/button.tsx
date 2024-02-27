@@ -1,4 +1,4 @@
-import './button.css';
+import './Button.css';
 import { IButton } from '../../types/interface';
 
 export default function Button({ text, isDisabled }: IButton) {
