@@ -36,6 +36,7 @@
     display: flex;
     justify-content: space-around;
 }
+
 .arrowLeftDark {
     font-family: Inter;
     font-size: 16px;
@@ -63,6 +64,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .NumberSequenceDark {
     width: 200px;
     height: 24px;
@@ -85,10 +87,11 @@
     letter-spacing: 0em;
     width: 100px;
     height: 24px;
-    color:black;
+    color: black;
     display: flex;
     justify-content: space-around;
 }
+
 .arrowRightDark {
     font-family: Inter;
     font-size: 16px;
@@ -97,7 +100,7 @@
     letter-spacing: 0em;
     width: 100px;
     height: 24px;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
 }
@@ -114,4 +117,24 @@
     height: 18px;
     margin-top: 4px;
     margin-left: -15px;
+}
+
+
+
+@media screen and (max-width: 1150px) {
+    .mainBlockNavigationLight {
+        width: 720px;
+    }
+    .mainBlockNavigationDark {
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 761px) {
+    .mainBlockNavigationLight {
+        width: 340px;
+    }
+    .mainBlockNavigationDark {
+        width: 340px;
+    }
 }

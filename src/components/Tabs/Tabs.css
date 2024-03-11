@@ -114,3 +114,53 @@
     background-color: #DADADA;
     margin-bottom: 40px;
 }
+
+
+@media screen and (max-width: 1150px) {
+    .greyLine {
+        width: 735px;
+    }
+}
+
+
+@media screen and (max-width: 761px) {
+    .greyLine {
+        width: 340px;
+    }
+
+    .allLight {
+        width: 70px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .allDark {
+        width: 70px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .favoriteLight {
+        width: 100px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .favoriteDark {
+        width: 100px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .popularLight {
+        width: 100px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .popularDark {
+        width: 100px;
+        height: 48px;
+        font-size: 14px;
+    }
+}

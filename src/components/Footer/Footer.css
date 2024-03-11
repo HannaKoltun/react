@@ -29,3 +29,19 @@
     text-align: left;
     color: #8D8E97;
 }
+
+
+
+@media screen and (max-width: 1150px) {
+    .titleFooter {
+        width: 720px;
+    }
+    
+}
+
+@media screen and (max-width: 761px) {
+    .titleFooter {
+        width: 340px;
+    }
+    
+}

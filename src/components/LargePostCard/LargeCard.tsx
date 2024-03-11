@@ -8,8 +8,13 @@ import { dataCards } from "../data"
 import { myContext } from "../../providers/ThemeContext"
 import { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../../slice/slice'
+import { IPostCard } from '../../types/interface';
+import { addToFav } from '../../slice/slice';
+import { BiSolidBookmark } from "react-icons/bi";
 
-export default function LargeCard() {
+export default function LargeCard({ component }: { component: any }) {
     const [color] = useContext(myContext)
 
 
@@ -33,12 +38,33 @@ export default function LargeCard() {
         fetchImage();
     }, []);
 
+
+    const dispatch = useDispatch()
+    function addFavorite() {
+        dispatch(addToFav(component))
+    }
+
     //counter
-    let [count, setCount] = useState(0)
+    const count = useSelector((state: any) => state.counter.value)
+
+
+    //hover Для закладки
+    const [isHovered, setIsHovered] = useState(false);
+
+    const icon = isHovered ? <BiSolidBookmark className={`bookMarkIconFav${color}`} /> : <FiBookmark className={`bookMarkIcon${color}`} />;
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
     return (
         <>
             <div className={`mainLargeCardBlock${color}`} >
-                <Link className='mainTopBlock' to ={`/${dataCards[0].id}`}>
+                <Link className='mainTopBlock' to={`/${dataCards[0].id}`}>
 
 
                     <div className='blockWitnText'>
@@ -48,7 +74,7 @@ export default function LargeCard() {
                                 <div className={`title${color}`} >{item.title}</div>
                                 <div className='description'>{item.description}</div>
                             </div>
-                        ))} 
+                        ))}
                     </div>
 
                     <div className=' blockWithImage'>{imageUrl && <img src={imageUrl}
@@ -60,16 +86,21 @@ export default function LargeCard() {
                 <div className='mainIconsBlock'>
 
                     <div className='likeBlock'>
-                        <AiOutlineLike className={`likeIcon${color}`} onClick={() => setCount(count + 1)} />
-                        <div className={`counter${color}`}>
-                            {count}
-                        </div>
+                        <AiOutlineLike className={`likeIcon${color}`} onClick={() => dispatch(increment())} />
+                        <div className={`counter${color}`}>{count}</div>
 
                         <BiDislike className={`likeIcon${color}`}></BiDislike>
                     </div>
 
+
+
                     <div className='saveBlock'>
-                        <FiBookmark className={`bookMarkIcon${color}`}></FiBookmark>
+                        <div
+                            className={`bookMarkIcon${color}`}
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            onClick={addFavorite}
+                            style={{ cursor: 'pointer' }}>{icon}</div>
                         <IoEllipsisHorizontal className={`ellipsisIcon${color}`}></IoEllipsisHorizontal>
                     </div>
 

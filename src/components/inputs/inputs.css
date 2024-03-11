@@ -1,9 +1,10 @@
 .mainBlockLight {
     width: 580px;
-    height: 125px;
+    height: 90px;
     background-color: #F3F3F3;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .mainBlockDark {
@@ -20,7 +21,7 @@
     border-radius: 2px;
     font-size: 13px;
     font-family: Inter;
-    font-weight: 200;
+    font-weight: 400;
     border: none;
     padding: 0px 0px 0px 20px;
 }
@@ -31,7 +32,7 @@
     border-radius: 2px;
     font-size: 13px;
     font-family: Inter;
-    font-weight: 200;
+    font-weight: 400;
     border: none;
     padding: 0px 0px 0px 20px;
     background-color: #3e3e45;

@@ -112,3 +112,27 @@
     letter-spacing: 0.03em;
     color: #FFFFFF
 }
+
+
+
+@media screen and (max-width: 1150px) {
+
+    .textBlockLight {
+        width: 720px;
+    }
+    
+    .textBlockDark {
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 761px) {
+
+    .textBlockLight {
+        width: 340px;
+    }
+    
+    .textBlockDark {
+        width: 340px;
+    }
+}

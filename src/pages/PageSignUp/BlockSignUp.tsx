@@ -14,7 +14,7 @@ export default function BlockSignUp() {
             <div className={`mainContainerUp${color}`}>
                 <div className={`mainBlockTitleUp${color}`}>
                     <div className={`backHomeUp${color}`}> Back to home</div>
-                    <div className= {`textBlockUp${color}`}>Sign Up</div>
+                    <div className={`textBlockUp${color}`}>Sign Up</div>
                     <div className={`containerUp${color}`}>
                         <div className={`inputsContainerUp${color}`}>
                             <Inputs
@@ -49,11 +49,11 @@ export default function BlockSignUp() {
                                 isDisabled={false}
                                 placeholder="Confirm password"
                             ></Inputs>
-
-                            <button className={`signUpButton${color}`}>Sign Up</button>
-
+                            <Link to={`/confirmation`}>
+                                <button className={`signUpButton${color}`}>Sign Up</button>
+                            </Link>
                             <div className={`titleAvailabilityAcc${color}`}>Already have an account?
-                                <Link className='signLink' to ="/signin">Sign In</Link>
+                                <Link className='signLink' to="/signin">Sign In</Link>
                             </div>
                         </div>
                     </div>

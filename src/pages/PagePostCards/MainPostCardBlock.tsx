@@ -8,6 +8,7 @@ import NavigationPostCard from '../../components/NavigationPostCard/NavigationPo
 import Footer from '../../components/Footer/Footer';
 import { myContext } from "../../providers/ThemeContext"
 import { useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';   
 
 
 export default function MainPostCardBlock() {
@@ -18,28 +19,35 @@ export default function MainPostCardBlock() {
     return (
         <>
 
-            <div className={`mainContainer${color}`}>
+            <div className={`mainContainerCards${color}`}>
                 <div className='mainPostCardBlock'>
                     <div className={`textBlock${color}`}>Blog</div>
                     <Tabs styleTab={`all${color}`} isDisabled={false}>All</Tabs>
-                    <Tabs styleTab={`favorite${color}`} isDisabled={false}>My favorites</Tabs>
+                    <Link to={`/favoriteposts`}>
+                        <Tabs styleTab={`favorite${color}`} isDisabled={false}>My favorites</Tabs>
+                    </Link>
+
                     <Tabs styleTab={`popular${color}`} isDisabled={false}>Popular</Tabs>
                     <div className='greyLine'></div>
 
                     <div className='containerL'>
                         <div className='leftContainer'>
                             <div className='largeContainer'>
-                                <LargeCard></LargeCard>
+                                <LargeCard
+                                    component={dataCards[0]}></LargeCard>
                             </div>
 
 
                             <div className='mediumContainer'>
                                 <div className='leftMContainer'>
+
                                     {dataCards.slice(1, 3).map((postItem) => (
+
                                         <MediumCard
                                             id={postItem.id}
                                             title={postItem.title}
-                                            date={postItem.date} />
+                                            date={postItem.date}
+                                            component={postItem} />
                                     ))}
                                 </div>
 
@@ -48,7 +56,8 @@ export default function MainPostCardBlock() {
                                         <MediumCard
                                             id={postItem.id}
                                             title={postItem.title}
-                                            date={postItem.date} />
+                                            date={postItem.date}
+                                            component={postItem} />
                                     ))}
                                 </div>
                             </div>
@@ -62,7 +71,8 @@ export default function MainPostCardBlock() {
                                 <SmallCard
                                     id={postItem.id}
                                     title={postItem.title}
-                                    date={postItem.date} />
+                                    date={postItem.date}
+                                    component={postItem} />
                             ))}
                         </div>
                     </div>

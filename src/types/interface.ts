@@ -46,4 +46,5 @@ export interface IPostCard {
     "title"?: string,
     "description"?: string,
     "author"?: number
+    "component"?: any
 }

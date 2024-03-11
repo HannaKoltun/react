@@ -2,6 +2,8 @@ import './BlockRegConfirm.css';
 import Footer from '../../components/Footer/Footer';
 import { myContext } from "../../providers/ThemeContext"
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function BlockRegConfirm() {
     const [color] = useContext(myContext)
@@ -19,7 +21,9 @@ export default function BlockRegConfirm() {
                                 link in the email <strong>example@gmail.com.</strong>
                                 <br />Please, check your email
                             </div>
+                            <Link to={`/`}>
                             <button className='signUpButton'>Go to home</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
