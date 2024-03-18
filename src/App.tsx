@@ -24,23 +24,30 @@ import PageSuccess from './pages/PageSuccess/BlockSuccess';
 import PageSearchResults from './pages/PageSearchResults/PageSearchResults';
 import BlockContentPage from './pages/PageContentBlock/BlockContentPage';
 import PageLinkResetPassword from './pages/PageLinkResetPassword/RageLinkResetPassword';
-import PageRecetPassword from  './pages/PageResetPassword/PageResetPassword';
-import PageNewPassword from  './pages/PageNewPassword/PageNewPassword';
+import PageRecetPassword from './pages/PageResetPassword/PageResetPassword';
+import PageNewPassword from './pages/PageNewPassword/PageNewPassword';
 import PageFavoritePosts from './pages/PageFavoritePosts/PageFavoritePosts';
 import ThemeContext from './providers/ThemeContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { fetchData } from '../src/slice/postSlice';
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function App() {
+  //посты с api
+  const dispatch = useDispatch<any>()
+  useEffect(() => {
+    dispatch(fetchData())
+  }, [dispatch])
+  
   return (
     <>
-
-
       <ThemeContext>
         <BrowserRouter>
           <Header></Header>
-        {/* <PageRecetPassword></PageRecetPassword> */}
-        {/* <PageLinkResetPassword></PageLinkResetPassword> */}
-        {/* <PageNewPassword></PageNewPassword> */}
+          {/* <PageRecetPassword></PageRecetPassword> */}
+          {/* <PageLinkResetPassword></PageLinkResetPassword> */}
+          {/* <PageNewPassword></PageNewPassword> */}
           <Routes>
             <Route path='/' element={<PageMainPostCard />}></Route>
             <Route path='/:id' element={<BlockContentPage />}></Route>
@@ -51,11 +58,9 @@ export default function App() {
             <Route path='/title' element={<PageTitle />}></Route>
             <Route path='/success' element={<PageSuccess />}></Route>
             <Route path='/confirmation' element={<PageRegConfirm />}></Route>
-            <Route path='/favoriteposts' element=  {<PageFavoritePosts />}></Route>
+            <Route path='/favoriteposts' element={<PageFavoritePosts />}></Route>
           </Routes>
         </BrowserRouter>
-
-
       </ThemeContext>
     </>
   );

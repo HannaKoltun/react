@@ -26,18 +26,6 @@ export default function PageFavoritePosts() {
     };
 
 
-    //image
-    const [imageUrl, setImageUrl] = useState('');
-    useEffect(() => {
-
-        async function fetchImage() {
-            let response = await fetch('https://loremflickr.com/320/240/space');
-            let blob = await response.blob();
-            let url = URL.createObjectURL(blob);
-            setImageUrl(url);
-        }
-        fetchImage();
-    }, []);
 
     const count = useSelector((state: any) => state.counter.value)
     const dispatch = useDispatch()
@@ -46,18 +34,16 @@ export default function PageFavoritePosts() {
     const favArray = useSelector((state: any) => state.counter.favArray);
 
 
-
-
     const [arrayText, setArrayText] = useState<ReactNode>(null);
 
     const toggleText = () => {
-        if (favArray.length > 0) {
-            setArrayText(
+        setArrayText(
+            favArray.length > 0 ? (
                 <div className='favoriteContainer'>
                     {favArray.map((item: any) => (
                         <div className={`mainFavCardBlock${color}`} key={item.id} >
                             <div className='blockWithImageFav'>
-                                <div>{imageUrl && <img src={imageUrl} className='imageSizeFav' />}</div>
+                                <div>{<img src={item.image} className='imageSizeFav' />}</div>
                             </div>
 
                             <div className='blockWithTextFav'>
@@ -69,6 +55,7 @@ export default function PageFavoritePosts() {
                                 <div className='likeBlockFav'>
                                     <AiOutlineLike className={`likeIconFav${color}`} onClick={() => dispatch(increment())} />
                                     <div className={`counterFav${color}`}>{count}</div>
+
                                     <BiDislike className={`likeIconFav${color}`} />
                                 </div>
                                 <div className='saveBlockFav'>
@@ -79,22 +66,19 @@ export default function PageFavoritePosts() {
                         </div >
                     ))}
                 </div>
-            )
-        } else {
-            setArrayText(
+            ) : (
                 <div className='noPosts'>
                     <h1 className="here">We haven't found your favorite posts</h1>
                     <img src={require("D:/Docs/TMS/react/reactt/my-react/src/assets/yH.gif")} alt="" />
                     <h1 className="here">Find something exciting for yourself <Link className="hereLink" to="/">here</Link></h1>
                 </div>
-            );
-        }
+            )
+        );
     }
 
     useEffect(() => {
         toggleText();
     }, [favArray]);
-
 
 
     return (
@@ -111,7 +95,6 @@ export default function PageFavoritePosts() {
                     </Link>
 
                     <Tabs styleTab={`popular${color}`} isDisabled={false}>Popular</Tabs>
-
 
                     <div>{arrayText}</div >
                 </div >

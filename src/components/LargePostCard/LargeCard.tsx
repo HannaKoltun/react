@@ -13,39 +13,37 @@ import { decrement, increment } from '../../slice/slice'
 import { IPostCard } from '../../types/interface';
 import { addToFav } from '../../slice/slice';
 import { BiSolidBookmark } from "react-icons/bi";
+import { fetchData } from '../../slice/postSlice';
+import { addOnePost } from '../../slice/postSlice';
 
-export default function LargeCard({ component }: { component: any }) {
+export default function LargeCard({ id, title, date, image, description, component }: IPostCard) {
     const [color] = useContext(myContext)
 
 
-    const originalDate = [dataCards[0]].map((item) => (item.date));
-    let DateString = String(originalDate)
-    const dateObj = new Date(DateString);
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const formattedDate = `${months[dateObj.getMonth()]} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
-
-    //image
-    const [imageUrl, setImageUrl] = useState('');
-    useEffect(() => {
-
-        async function fetchImage() {
-            let response = await fetch('https://loremflickr.com/320/240/space');
-            let blob = await response.blob();
-            let url = URL.createObjectURL(blob);
-            setImageUrl(url);
+    //date
+    const formattedDate = (date: any) => {
+        if (!date) {
+            return 'у тебя дата ундефинед';
         }
-        fetchImage();
-    }, []);
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const [year, month, day] = date.split('-');
+           return `${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
+    };
 
 
-    const dispatch = useDispatch()
+
+    const dispatch = useDispatch<any>()
     function addFavorite() {
         dispatch(addToFav(component))
+    }
+    function openOnePost() {
+        dispatch(addOnePost(component))
     }
 
     //counter
     const count = useSelector((state: any) => state.counter.value)
+
+
 
 
     //hover Для закладки
@@ -64,21 +62,23 @@ export default function LargeCard({ component }: { component: any }) {
     return (
         <>
             <div className={`mainLargeCardBlock${color}`} >
-                <Link className='mainTopBlock' to={`/${dataCards[0].id}`}>
+                <Link className='mainTopBlock' to={`/${id}`}>
 
 
                     <div className='blockWitnText'>
-                        {[dataCards[0]].map((item) => (
-                            <div key={item.id}>
-                                <div className='date'>{formattedDate}</div>
-                                <div className={`title${color}`} >{item.title}</div>
-                                <div className='description'>{item.description}</div>
+                            <div>
+                                <div className='date'>{formattedDate(date)}</div>
+                                <div key={id}>
+                                    <Link className={`title${color}`} to={`/${id}`} onClick={openOnePost}>{title}</Link>
+                                </div>
+                                <div className='description'>{description}</div>
                             </div>
-                        ))}
                     </div>
 
-                    <div className=' blockWithImage'>{imageUrl && <img src={imageUrl}
-                        className='imageSize' />}
+                    
+
+                    <div className=' blockWithImage'>
+                    <img src={image} className='imageSize' />
                     </div>
                 </Link>
 

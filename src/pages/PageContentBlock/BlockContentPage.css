@@ -9,6 +9,44 @@
 
 }
 
+
+.loader {
+    width:50px;
+    height: 50px;
+    position: relative;
+    margin: 570px;
+  }
+  .loader:before , .loader:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+        width:50px;
+        height: 50px;
+    border-radius: 50%;
+    background: #2231AA;
+    animation: push 1s infinite linear alternate;
+  }
+  .loader:after {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    background: #898787;
+    animation-direction: alternate-reverse;
+  }
+  @keyframes push {
+      0% {
+        width:14px;
+        height: 14px;
+      }
+      100% {
+        width:50px;
+        height: 50px;
+      }
+  }
+
+
+
 .mainOnePageContainerDark {
     width: auto;
     height: auto;
@@ -473,6 +511,7 @@
         justify-content: space-between;
 
     }
+
     .mainOneBlockNavigationDark {
         width: 720px;
         height: 100px;
@@ -507,6 +546,7 @@
         font-size: 25px;
         line-height: 35px;
     }
+
     .OnePageContainerTitleDark {
         width: 340px;
         height: 145px;
@@ -558,6 +598,7 @@
         flex-direction: row;
         justify-content: space-between;
     }
+
     .mainOneBlockNavigationDark {
         width: 340px;
         height: 100px;
@@ -584,6 +625,7 @@
         font-size: 13px;
         line-height: 25px;
     }
+
     .onePageDescriptionDark {
         width: 340px;
         height: auto;
@@ -598,13 +640,16 @@
     .textPrevContainer {
         width: 180px;
     }
-    .containerMark{
+
+    .containerMark {
         margin-bottom: 15px;
         width: 235px;
     }
+
     .dislikeButtonLight {
         width: 110px;
     }
+
     .likeButtonLight {
         width: 110px;
     }
@@ -612,6 +657,7 @@
     .dislikeButtonDark {
         width: 110px;
     }
+
     .likeButtonDark {
         width: 110px;
     }

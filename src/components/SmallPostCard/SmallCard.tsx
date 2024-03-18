@@ -12,39 +12,35 @@ import { addToFav } from '../../slice/slice';
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../../slice/slice'
 import { BiSolidBookmark } from "react-icons/bi";
+import { fetchData } from '../../slice/postSlice';
+import { addOnePost } from '../../slice/postSlice';
 
 
-export default function SmallCard({ id, date, title, component }: IPostCard) {
+export default function SmallCard({ id, title, date, image, component }: IPostCard) {
     const [color] = useContext(myContext)
 
     //date
     const formattedDate = (date: any) => {
+        if (!date) {
+            return 'у тебя дата ундефинед';
+        }
         const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
         const [year, month, day] = date.split('-');
-        return `${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
+           return `${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
     };
 
-    //image
-    const [imageUrl, setImageUrl] = useState('');
-    useEffect(() => {
-
-        async function fetchImage() {
-            let response = await fetch('https://loremflickr.com/320/240/space');
-            let blob = await response.blob();
-            let url = URL.createObjectURL(blob);
-            setImageUrl(url);
-        }
-        fetchImage();
-    }, []);
 
     //закладка
-    const dispatch = useDispatch()
+    const dispatch = useDispatch<any>()
     function addFavorite() {
         dispatch(addToFav(component))
     }
+    function openOnePost() {
+        dispatch(addOnePost(component))
+    }
 
     const count = useSelector((state: any) => state.counter.value)
+
 
 
     //hover Для закладки
@@ -67,15 +63,17 @@ export default function SmallCard({ id, date, title, component }: IPostCard) {
 
 
                     <div className='blockWitnTextS'>
-                        <div key={id}>
+                            <div>
                             <div className='dateS'>{formattedDate(date)}</div>
-                            <Link className={`titleS${color}`} to={`/${id}`}>{title}</Link>
-                        </div>
+                                <div key={id}>
+                                    <Link className={`titleS${color}`} to={`/${id}`} onClick={openOnePost}>{title}</Link>
+                                </div>
+                            </div>
                     </div>
 
 
-                    <div className=' blockWithImageS'>{imageUrl && <img src={imageUrl}
-                        className='imageSizeS' />}
+                    <div className=' blockWithImageS'>
+                       <img src={image} className='imageSizeS' />
                     </div>
                 </div>
 

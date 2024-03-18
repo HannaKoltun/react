@@ -1,4 +1,6 @@
-import { createSlice, current } from '@reduxjs/toolkit'
+import { createSlice, current} from '@reduxjs/toolkit'
+
+
 
 
 export const counterSlice = createSlice({
@@ -14,17 +16,13 @@ export const counterSlice = createSlice({
         decrement: (state) => {
             state.value -= 1
         },
-        incrementByAmount: (state, action) => {
-            state.value += action.payload
-        },
         addToFav(state: any, { payload }: { payload: any }) {
             state.favArray.push(payload)
-            console.log(current(state.favArray))
         }
     },
+});
 
-})
 
-export const { increment, decrement, incrementByAmount, addToFav } = counterSlice.actions
+export const { increment, decrement, addToFav } = counterSlice.actions
 
 export default counterSlice.reducer
