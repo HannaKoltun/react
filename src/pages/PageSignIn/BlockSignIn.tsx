@@ -2,12 +2,14 @@ import './BlockSignIn.css';
 import Inputs from '../../components/Inputs/Inputs';
 import Footer from '../../components/Footer/Footer';
 import { myContext } from "../../providers/ThemeContext"
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function BlockSignIn() {
 
     const [color] = useContext(myContext)
+
+    const [inputName, setInputName] = useState('')
     return (
         <>
             <div className={`mainContainerIn${color}`}>
@@ -23,6 +25,8 @@ export default function BlockSignIn() {
                                 typeInput={`default${color} focus${color} active${color}`}
                                 isDisabled={false}
                                 placeholder="Your email"
+                                inputValue={inputName}
+                                setInputValue={e => setInputName(e.target.value)}
                             ></Inputs>
                             <Inputs
                                 id="3"
@@ -31,6 +35,8 @@ export default function BlockSignIn() {
                                 typeInput={`default${color} focus${color} active${color}`}
                                 isDisabled={false}
                                 placeholder="Your password"
+                                inputValue={inputName}
+                                setInputValue={e => setInputName(e.target.value)}
                             ></Inputs>
                             <a href="" className={`forgotPass${color}`}>Forgot password?</a>
                             <button className='signUpButton'>Sign In</button>

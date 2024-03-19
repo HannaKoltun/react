@@ -4,9 +4,9 @@ import { myContext } from "../../providers/ThemeContext"
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-
 export default function BlockRegConfirm() {
     const [color] = useContext(myContext)
+
     return (
         <>
             <div className={`mainContainerConfirm${color}`}>
@@ -18,7 +18,7 @@ export default function BlockRegConfirm() {
 
                             <div className={`regDescriptionConfirm${color}`}>
                                 Please activate your account with the activation
-                                link in the email <strong>example@gmail.com.</strong>
+                                link in the email <strong>EMAIL</strong>
                                 <br />Please, check your email
                             </div>
                             <Link to={`/`}>

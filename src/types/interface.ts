@@ -10,6 +10,8 @@ export interface IInput {
     legend: string,
     id: string
     placeholder: string
+    inputValue: string
+    setInputValue: (e: any) => void
 }
 
 export interface IPrimary {

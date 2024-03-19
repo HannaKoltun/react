@@ -10,10 +10,9 @@ import { IPostCard } from '../../types/interface';
 import { Link } from 'react-router-dom';
 import { addToFav } from '../../slice/slice';
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../../slice/slice'
+import { increment } from '../../slice/slice'
 import { BiSolidBookmark } from "react-icons/bi";
-import { fetchData } from '../../slice/postSlice';
-import { addOnePost } from '../../slice/postSlice';
+
 
 
 export default function SmallCard({ id, title, date, image, component }: IPostCard) {
@@ -34,9 +33,6 @@ export default function SmallCard({ id, title, date, image, component }: IPostCa
     const dispatch = useDispatch<any>()
     function addFavorite() {
         dispatch(addToFav(component))
-    }
-    function openOnePost() {
-        dispatch(addOnePost(component))
     }
 
     const count = useSelector((state: any) => state.counter.value)
@@ -66,7 +62,7 @@ export default function SmallCard({ id, title, date, image, component }: IPostCa
                             <div>
                             <div className='dateS'>{formattedDate(date)}</div>
                                 <div key={id}>
-                                    <Link className={`titleS${color}`} to={`/${id}`} onClick={openOnePost}>{title}</Link>
+                                    <Link className={`titleS${color}`} to={`/${id}`}>{title}</Link>
                                 </div>
                             </div>
                     </div>

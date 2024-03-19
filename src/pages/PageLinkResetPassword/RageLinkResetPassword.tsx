@@ -17,14 +17,14 @@ export default function BlockSignIn() {
                     <div className={`containerRP${color}`}>
                         <div className={`inputsContainerRP${color}`}>
                         <div className='decriptionResetBlock'>You will receive an email <strong>example@gmail.com</strong> with a link to reset your password!</div>
-                            <Inputs
+                            {/* <Inputs
                                 id="2"
                                 legend="Email"
                                 type="email"
                                 typeInput={`default${color} focus${color} active${color}`}
                                 isDisabled={false}
                                 placeholder="Your email"
-                            ></Inputs>
+                            ></Inputs> */}
                             <button className='resetButton'>Go to home</button>
                         </div>
                     </div>

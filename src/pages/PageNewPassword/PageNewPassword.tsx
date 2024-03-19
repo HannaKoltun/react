@@ -16,7 +16,7 @@ export default function BlockSignIn() {
                     <div className={`textBlockRP${color}`}>New Password</div>
                     <div className={`containerRP${color}`}>
                         <div className={`inputsContainerNew${color}`}>
-                            <Inputs
+                            {/* <Inputs
                                 id="3"
                                 legend="Password"
                                 type="password"
@@ -31,7 +31,7 @@ export default function BlockSignIn() {
                                 typeInput={`default${color} focus${color} active${color}`}
                                 isDisabled={false}
                                 placeholder="Confirm your password"
-                            ></Inputs>
+                            ></Inputs> */}
                             <button className='resetButton'>Set Password</button>
                         </div>
                     </div>

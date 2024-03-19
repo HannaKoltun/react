@@ -14,7 +14,6 @@ import { IPostCard } from '../../types/interface';
 import { addToFav } from '../../slice/slice';
 import { BiSolidBookmark } from "react-icons/bi";
 import { fetchData } from '../../slice/postSlice';
-import { addOnePost } from '../../slice/postSlice';
 
 export default function LargeCard({ id, title, date, image, description, component }: IPostCard) {
     const [color] = useContext(myContext)
@@ -35,9 +34,6 @@ export default function LargeCard({ id, title, date, image, description, compone
     const dispatch = useDispatch<any>()
     function addFavorite() {
         dispatch(addToFav(component))
-    }
-    function openOnePost() {
-        dispatch(addOnePost(component))
     }
 
     //counter
@@ -69,7 +65,7 @@ export default function LargeCard({ id, title, date, image, description, compone
                             <div>
                                 <div className='date'>{formattedDate(date)}</div>
                                 <div key={id}>
-                                    <Link className={`title${color}`} to={`/${id}`} onClick={openOnePost}>{title}</Link>
+                                    <Link className={`title${color}`} to={`/${id}`}>{title}</Link>
                                 </div>
                                 <div className='description'>{description}</div>
                             </div>

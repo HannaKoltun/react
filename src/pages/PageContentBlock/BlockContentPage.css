@@ -9,44 +9,6 @@
 
 }
 
-
-.loader {
-    width:50px;
-    height: 50px;
-    position: relative;
-    margin: 570px;
-  }
-  .loader:before , .loader:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-        width:50px;
-        height: 50px;
-    border-radius: 50%;
-    background: #2231AA;
-    animation: push 1s infinite linear alternate;
-  }
-  .loader:after {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    background: #898787;
-    animation-direction: alternate-reverse;
-  }
-  @keyframes push {
-      0% {
-        width:14px;
-        height: 14px;
-      }
-      100% {
-        width:50px;
-        height: 50px;
-      }
-  }
-
-
-
 .mainOnePageContainerDark {
     width: auto;
     height: auto;

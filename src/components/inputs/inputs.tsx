@@ -5,14 +5,16 @@ import { myContext } from "../../providers/ThemeContext"
 import { useContext } from 'react';
 
 
-export default function Inputs({ typeInput, isDisabled, type, legend, id, placeholder }: IInput) {
+export default function Inputs({ typeInput, isDisabled, type, legend, id, placeholder, inputValue, setInputValue }: IInput) {
     const [color] = useContext(myContext)
 
-    const [dataName, setDataNAme] = useState("");
+    // const [dataName, setDataNAme] = useState("");
+
     function inputTextChange(event: any): void {
-        setDataNAme(event.target.value)
-        setError(event.target.value.length > 10)
-        setErrorText(event.target.value.length > 10)
+        // setDataNAme(event.target.value)
+
+        setError(event.target.value.length > 30)
+        setErrorText(event.target.value.length > 30)
     }
     const [error, setError] = useState(false);
     const [errorText, setErrorText] = useState(false);
@@ -28,8 +30,9 @@ return (
                     id={id}
                     type={type}
                     className={typeInput}
-                    value={dataName}
-                    onChange={inputTextChange}
+                    value={inputValue}
+                    // onChange={inputTextChange}
+                    onChange={setInputValue}
                     placeholder={placeholder}
                     style={{ border: error ? "2px solid #FD3419" : typeInput }}
                 ></input>

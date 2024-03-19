@@ -3,7 +3,7 @@ import { createSlice, current, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const fetchData = createAsyncThunk(
     'slice/fetchData',
-    async function (_, {rejectWithValue}) {
+    async function (_, { rejectWithValue }) {
         try {
             const response = await fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11&offset=0')
             if (!response.ok) {
@@ -12,7 +12,7 @@ export const fetchData = createAsyncThunk(
             const data = await response.json()
             return data
         }
-        catch (error){
+        catch (error) {
             return rejectWithValue((error as Error).message)
         }
     }
@@ -20,7 +20,7 @@ export const fetchData = createAsyncThunk(
 
 export const fetchOnePost = createAsyncThunk(
     'slice/fetchOnePost',
-    async function (id: string, {rejectWithValue}) {
+    async function (id: string, { rejectWithValue }) {
         try {
             const response = await fetch(`https://studapi.teachmeskills.by/blog/posts/${id}/`)
             if (!response.ok) {
@@ -29,13 +29,12 @@ export const fetchOnePost = createAsyncThunk(
             const data = await response.json()
             return data
         }
-        
-        catch (error){
+
+        catch (error) {
             return rejectWithValue((error as Error).message)
         }
     }
 )
-
 
 export const postSlice = createSlice({
     name: 'posts',
@@ -46,13 +45,7 @@ export const postSlice = createSlice({
         onePost: null,
     },
     reducers: {
-        add(state: any, action) {
-            state.posts.push(action.payload)
-        },
 
-        addOnePost(state: any, { payload }: { payload: any }) {
-            // state.onePost = payload.results
-        }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchData.fulfilled, (state: any, { payload }: { payload: any }) => {
@@ -71,7 +64,7 @@ export const postSlice = createSlice({
             state.error = null;
         })
 
-//onePost
+        //onePost
         builder.addCase(fetchOnePost.fulfilled, (state: any, { payload }: { payload: any }) => {
             state.status = "resolved";
             state.error = null;
@@ -90,6 +83,6 @@ export const postSlice = createSlice({
     }
 });
 
-export const { add, addOnePost } = postSlice.actions
+export const { } = postSlice.actions
 
 export default postSlice.reducer

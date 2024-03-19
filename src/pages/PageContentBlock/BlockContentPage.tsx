@@ -13,6 +13,7 @@ import { myContext } from '../../providers/ThemeContext';
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchOnePost } from '../../slice/postSlice';
 import { useParams } from 'react-router-dom';
+import Spinner from '../../components/Spinner/Spinner';
 
 
 export default function BlockContentPage() {
@@ -114,7 +115,7 @@ export default function BlockContentPage() {
 
                     </div>
                 ) : (
-                    <div className="loader"></div>
+                    <Spinner></Spinner>
                 )}
             </div>
         </>

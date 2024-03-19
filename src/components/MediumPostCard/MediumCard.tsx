@@ -9,12 +9,9 @@ import { useContext } from 'react';
 import { Link} from 'react-router-dom';
 import { IPostCard } from '../../types/interface';
 import { addToFav } from '../../slice/slice';
-import { addOnePost } from '../../slice/postSlice';
-import { fetchData } from '../../slice/postSlice';
 import { useSelector, useDispatch } from 'react-redux'
 import { increment } from '../../slice/slice'
 import { BiSolidBookmark } from "react-icons/bi";
-import { fetchOnePost } from '../../slice/postSlice';
 
 export default function MediumCard({ id, title, date, image, component }: IPostCard) {
 
